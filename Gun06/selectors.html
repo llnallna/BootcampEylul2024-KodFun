@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .favori {
+            border-left: 10px solid #2d00c0;
+        }
+
+        #memleket {
+            text-align: center;
+        }
+
+        #memleket::after {
+            content: "(OTOPARK)";
+            font-weight: bold;
+        }
+
+        /* tek sayılar için odd veya 2n+1 yazılabilir */
+        li:nth-child(odd) {
+            background-color: gainsboro;
+        }
+
+        /* li:nth-child(2n+1) {
+            background-color: gainsboro;
+        } */
+
+        /* immediate child - birinci derece - div'in direct çocuğu durumundaki p'leri seçer */
+        div>p {
+            margin: 0 60px;
+            text-align: justify;
+            font-size: 80%;
+        }
+
+        /* div altındaki p'nin de altında olan çocuğu seçmek için > kullanmadan yazarız */
+        div p {
+            font-family: "Comic Sans MS";
+        }
+
+        h1,
+        h2 {
+            background-color: antiquewhite;
+        }
+
+        /* attribute selector */
+        [title] {
+            background-color: chartreuse;
+        }
+
+        li[title] {
+            font-style: italic;
+        }
+
+        /* selecting siblings - h2'den sonra gelen p'yi seçmek gibi*/
+        h2+p {
+            text-indent: 20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Türkiye</h1>
+
+    <h2>Kütahya</h2>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid hic sed
+        neque earum est vero?
+    </p>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla repellat
+        repellendus ipsum nisi nostrum fugiat cupiditate aut quam corrupti
+        excepturi animi, nihil dolorum, recusandae odio.
+    </p>
+
+    <div>
+        <p>
+            Nüfus: Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, harum vitae debitis fugit ipsum dicta
+            corrupti
+            eaque nam nemo odio minima voluptas hic temporibus, doloribus error, est libero atque a.
+        </p>
+
+        <section>
+            <p>
+
+
+                Kütahya <span title="kaliteli ürün"> Porselen </span>
+            </p>
+        </section>
+    </div>
+
+    <h3>İlçeleri</h3>
+    <ul>
+        <li>Merkez 1</li>
+        <li>Merkez 2</li>
+        <li title="Dikkat! Antik Kent İçerir">Merkez 3</li>
+        <li>Merkez 4</li>
+        <li>Merkez 5</li>
+        <li class="favori">Merkez 6</li>
+        <li>Merkez 7</li>
+        <li>Merkez 8</li>
+        <li class="favori">Merkez 9</li>
+        <li>Merkez 10</li>
+        <li>Merkez 11</li>
+        <li>Merkez 12</li>
+        <li id="memleket" class="favori">Merkez 13</li>
+    </ul>
+</body>
+
+</html>
