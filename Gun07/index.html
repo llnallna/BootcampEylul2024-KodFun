@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .onemli {
+            border-left: 10px solid #7d00f9;
+        }
+
+        /* onemli class'ından sonra gelen li'yi seçmek için: */
+        .onemli+li {
+            border-left: 10px solid #f2ff00;
+        }
+
+        /* onemli class'ından sonra gelen li'leri seçmek için: */
+        .onemsiz~li {
+            border-left: 10px solid #ff5500;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li>Veritatis, blanditiis.</li>
+        <li class="onemli">Nulla, veritatis.</li>
+        <li>Quod, quaerat!</li>
+        <li class="onemsiz">Eum, amet.</li>
+        <li>Velit, quam?</li>
+        <li>Voluptatibus, velit.</li>
+    </ul>
+</body>
+
+</html>
