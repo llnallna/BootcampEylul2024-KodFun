@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .palm {
+            position: absolute;
+            /*absolute, elemanı akıştan çıkarır.*/
+            bottom: 0;
+            right: 0;
+        }
+
+        .uzun {
+            position: relative;
+            /*relative, elemanın akıştaki yerini koruyarak başka yerde görünmesini sağlar.*/
+        }
+
+        .agac {
+            position: absolute;
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
+            opacity: 0.5;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>anıl</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat ratione aut dignissimos quaerat vero
+        tempora nesciunt molestiae iure veniam nemo explicabo odit quas cumque magni, alias, laboriosam saepe? Iste.</p>
+    <div class="container">
+
+        <img src="palm-tree.png" alt="" class="palm" width="20">
+
+    </div>
+
+    <p class="uzun">
+        <img src="palm-tree.png" alt="" class="agac" width="100">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, deserunt eligendi. Ad aspernatur consequuntur
+        temporibus, rem quis id explicabo labore totam molestias voluptates perspiciatis deleniti fugit voluptate
+        nulla sequi suscipit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, deserunt eligendi. Ad aspernatur consequuntur
+        temporibus, rem quis id explicabo labore totam molestias voluptates perspiciatis deleniti fugit voluptate
+        nulla sequi suscipit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, deserunt eligendi. Ad aspernatur consequuntur
+        temporibus, rem quis id explicabo labore totam molestias voluptates perspiciatis deleniti fugit voluptate
+        nulla sequi suscipit.
+
+    </p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stil1 {}
+
+        .stil2 {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .stil3 {
+            list-style-type: square;
+        }
+
+        ul.stil4>li {
+            border: 1px solid orange;
+        }
+
+        ul.stil5>li {
+            border: 1px solid orange;
+            list-style-position: inside;
+            padding-left: 10px;
+        }
+
+        ul.stil8 {
+            list-style: none;
+            padding: 0;
+            border: 1px solid blueviolet;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        ul.stil8>li {
+            padding: 12px;
+            border-bottom: 1px solid blueviolet;
+        }
+
+        ul.stil8>li:last-child {
+            border-bottom: none;
+        }
+
+        ul.stil8>li:nth-child(2n+1) {
+            background-color: bisque;
+        }
+
+        ul.stil8>li:hover {
+            background-color: brown;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Çok Değişik Bu</h4>
+    <ul class="stil8">
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+    </ul>
+
+    <h4>Marker Psitions(içte)</h4>
+    <ul class="stil5">
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+    </ul>
+
+    <h4>Marker Psitions(dışta)</h4>
+    <ul class="stil4">
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+    </ul>
+
+    <h4>List Stil Tipi</h4>
+    <ul class="stil3">
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+    </ul>
+
+    <h4>Stillerden Arındırılmış</h4>
+    <ul class="stil2">
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+    </ul>
+
+    <h4>Marker'sız Liste</h4>
+    <ul class="stil1">
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+    </ul>
+
+    <h4>Standart Görünüm</h4>
+    <ul>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+        <li>lorem2</li>
+    </ul>
+</body>
+
+</html>
