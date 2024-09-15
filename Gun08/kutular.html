@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: orange;
+            padding: 20px;
+            border: 10px solid rgb(133, 4, 220);
+            margin: 15px;
+            color: rgb(244, 244, 244);
+            float: left;
+            outline: 10px solid yellow
+                /*outline'ın yerleşime bir etkisi yoktur(height ve width'i kaydırmaz) sadece border'a effect verilmiş gibi çerçeve oluşturur.*/
+            ;
+            outline-offset: 5px;
+        }
+
+        main {
+            border: 10px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>Kutu 1</div>
+        <div>Kutu 2</div>
+        <div>Kutu 3</div>
+        <div>Kutu 4</div>
+        <div>Kutu 5</div>
+        <div>Kutu 6</div>
+        <div>Kutu 7</div>
+        <div>Kutu 8</div>
+        <div>Kutu 9</div>
+        <div>Kutu 10</div>
+    </main>
+</body>
+
+</html>
