@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="baslik"></h1>
+    <!-- başlık id'li elemanın metnini "JQuery Öğreniyorum" yap 1vanilla js ile 2-JQuery ile -->
+
+    <ul>
+        <li>Pattaya</li>
+        <li>Ankara</li>
+        <li>Kentau</li>
+        <li>Antep</li>
+        <li>Iğdır</li>
+        <li>Konya</li>
+        <li>Denizli</li>
+        <li>İstanbul</li>
+        <li>Bayburt</li>
+        <li>Konya</li>
+    </ul>
+
+    <h2>Rakammatik</h2>
+    <div id="rakamlar">
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+        <button>0</button>
+    </div>
+
+    <p><small>Gizli şifreyi bilirseniz tüm içerik silinecektir</small></p>
+
+
+    <script src="script.js"></script>
+
+    <!-- Jquery bağlantısı -->
+    <!-- indirerek: jquery sitesinden download tıklayarak açılan sayfada ctrl+s yap kullanacağın yere(Gun40) kaydet -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $("#baslik").text("JQuery Öğreniyorum");
+
+        //  <!-- 2-başlığa border ver -->
+
+        $("#baslik").css("border", "1px solid black");
+
+
+        // <!-- 3-Başlığın title attribute'una bir değer ata -->
+        $("#baslik").attr("title", "I ♥ JQuery");
+
+
+        // 4- başlıktan sonra hr ekle
+        $("#baslik").after("<hr>");
+
+
+        // $("li").each((indeks, el) => el.append(" :) -" + indeks));
+
+        // 6- şehirlerin sonuna gülücük başına indeks koy
+        $("li").each(function (i) {
+            // console.log(this)
+            $(this).append(" :)");
+            $(this).prepend("(" + i + ") ");
+
+        });
+        // ÖNEMLİ NOT: this ketwordüne sırayla öğelerin atanmasını istiyorsanız arrow function yerine klasik function kullanın.
+
+        // 7- içinde u harfi olan li'leri sarı yap
+        $("li").each(function () {
+            if ($(this).text().includes("u"))
+                $(this).css("color", "red");
+        })
+
+        //8- a harfi 
+        $("li")
+            .filter((i, el) => !$(el).text().includes("a"))
+            .css("background", "yellow");
+
+        //9- tüm li ögelerinin metinlerini al ve bir paragrafa koy. O paragrafı da listanin altına ekle
+        $("ul").after
+            ("<p>" + $("li").text() + "<p>")
+
+        // 10- 7. indeksteki(0'dan başlayarak) li ögesini başa taşı
+        // $("ul").prepend($("li:nth-child(8)"))
+
+        // veya
+        $("ul").prepend($("li").eq(7));
+
+        // kayan liste
+        // saniyede bir her eleman bir alta kaysın
+        setInterval(function () {
+            $("ul").prepend($("li").last());
+        }, 1000)
+
+        // ya içerenleri büyük harfe çevir
+        $("li:contains('ya')").css("text-transform", "uppercase");
+
+        $("button").click(function () {
+            //this.textContent = "şaka"; //js ile yazabiliyoruz buraya
+            let sayi = Number($(this).text());
+            $(this).text((sayi + 1) % 10);
+        });
+
+        // gizli bir şifre belirleyelim
+        // onu rakammatikten girerse sayfadaki herşeyi silsin
+        let gizli = "100001"
+
+        $("#rakamlar>button").click(function () {
+            let girilen = $("button").text();
+            if (girilen == gizli) {
+
+                $("body").html(""); //by Meryoş :)
+
+                $("html, body").css({
+                    "height": "100%",
+                    "margin": 0
+                })
+                // $("<img/>")
+                //     .attr("src", "korkBenden.jpg")
+                //     .appendTo("body")
+                //     .css({
+                //         "display": "block",
+                //         "width": "100%",
+                //         "height": "100%",
+                //     })
+                $("body").css({
+                    "background": "url(korkBenden.jpg) center",
+                    "background-size": "cover"
+                })
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
