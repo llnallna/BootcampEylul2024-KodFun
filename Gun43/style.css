@@ -1,0 +1,33 @@
+.secici {
+  background-color: rgba(161, 223, 254, 0.792);
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.secici {
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+.secici > input {
+  flex: 1;
+}
+
+#sonuc {
+  margin-top: 1px;
+  height: 200px;
+  background-color: rgb(128, 128, 128);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sonuc #kod {
+  background-color: #fff;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+}
