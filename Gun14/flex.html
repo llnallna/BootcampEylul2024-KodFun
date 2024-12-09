@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+
+    <style>
+      .container {
+        border: 10px dashed blue;
+        height: 300px;
+        display: flex; /* ÇOCUKLARI ESNEK YERLEŞECEK */
+        flex-direction: row; /* row row-reverse column column-reverse */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+        align-items: center; /* stretch center flex-start flex-end baseline */
+        justify-content: space-evenly; /* flex-start flex-end center space-between space-around space-evenly */
+      }
+
+      .kutu1 {
+        background-color: yellow;
+      }
+
+      .kutu2 {
+        background-color: rgb(170, 0, 255);
+      }
+
+      .kutu3 {
+        background-color: rgb(255, 128, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="kutu1">Lorem ipsum dolor sit amet.</div>
+      <div class="kutu2">Lorem ipsum dolor</div>
+      <div class="kutu3">Lorem ipsum</div>
+    </div>
+  </body>
+</html>
